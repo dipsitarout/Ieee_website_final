@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --primary-color: greenyellow;
+  --secondary-color: #27ff20;
+  --tertiary-color: #bfff51;
+  --background-dark: #000000;
+  --text-color: white;
+}
+
+.navbar {
+  font-family: 'Poppins', sans-serif;
+ 
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 0 10px rgba(173, 255, 47, 0.3);
+  transition: background 0.3s ease-in-out;
+  padding: 12px 20px;
+}
+
+/* LOGO STYLING */
+.nav-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-color);
+  text-transform: uppercase;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.nav-logo:hover {
+  transform: scale(1.1);
+  color: var(--primary-color);
+  text-shadow: 0 0 8px var(--primary-color);
+}
+
+/* NAV MENU */
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* NAV LINKS */
+.nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  position: relative;
+  padding: 8px 12px;
+  transition: color 0.3s ease-in-out, transform 0.2s;
+}
+
+/* Underline animation */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--secondary-color), var(--tertiary-color));
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.nav-link:hover {
+  color: var(--primary-color);
+  transform: scale(1.1);
+  text-shadow: 0 0 5px var(--primary-color);
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px 20px;
+  }
+  
+  header {
+    margin-top: 20px;
+  }
+  
+  .nav-logo a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .nav-menu {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: var(--text-color, #fff);
+    font-size: 1rem;
+    transition: color 0.3s, font-size 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: greenyellow;
+    font-size: 1.1rem;
+  }
+  
+  .highlight {
+    background-color: var(--btn-color, greenyellow);
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .highlight:hover {
+    transform: scale(1.05);
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 250px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+  }
+  
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  @media (max-width: 992px) {
+    .nav-menu {
+      display: none;
+    }
+    
+    .highlight {
+      display: none;
+    }
+    
+    .dropdown-menu {
+      display: block;
+    }
+  }
+  
+  transform-origin: left;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  background: var(--background-dark);
+  color: var(--text-color);
+  text-align: center;
+  padding: 10px;
+}
+
+/* Mobile Nav Links */
+.mobile-menu .nav-link {
+  display: block;
+  padding: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.mobile-menu .nav-link:hover {
+  background: rgba(173, 255, 47, 0.1);
+  border-radius: 8px;
+}
+
+/* MOBILE MENU ANIMATION */
+.mobile-menu-container {
+  transform: translateY(-10px);
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .nav-logo {
+    font-size: 1.5rem;
+  }
+}
