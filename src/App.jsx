@@ -1,6 +1,6 @@
 import './App.css';
 import PhotonicsLanding from './components/pages/landing';
-import Navbar from './components/pages/navbar';
+import Navbar from './components/pages/Navbar';
 import ObjectiveSection from './components/pages/about';
 import AboutUsSection from './components/pages/about2';
 import AnimatedTestimonials from './components/pages/Teams';
