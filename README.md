@@ -8,7 +8,7 @@
 
 ## 🚀 Live Site
 
-🌍 [Visit the Website](ieeephotonicssociety.vercel.app) *(Coming Soon)*
+🌍 [Visit the Website](ieeephotonicssociety.vercel.app)
 
 ---
 
