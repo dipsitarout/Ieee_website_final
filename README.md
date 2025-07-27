@@ -4,13 +4,7 @@
 > Official web presence of the IEEE Photonics Society at VIT Chennai, built with modern web technologies and elegant UI design.
 
 
----
 
-## 🚀 Live Site
-
-🌍 [Visit the Website](ieeephotonicssociety.vercel.app)
-
----
 
 ## 📌 About the Club
 
